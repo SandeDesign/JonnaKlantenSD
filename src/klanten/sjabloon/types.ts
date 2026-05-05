@@ -28,6 +28,7 @@ export interface Testimonial {
 }
 
 export interface SjabloonConfig {
+  basePath: string;
   id: string;
   name: string;
   tagline: string;

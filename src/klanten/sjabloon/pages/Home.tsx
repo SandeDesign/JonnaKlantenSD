@@ -31,14 +31,14 @@ export const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to={config.hero.ctaLink}
+                to={config.basePath + config.hero.ctaLink}
                 className="px-8 py-4 font-semibold text-white rounded-xl transition-opacity hover:opacity-90 shadow-lg"
                 style={{ backgroundColor: p }}
               >
                 {config.hero.cta}
               </Link>
               <Link
-                to={config.hero.ctaSecondaryLink}
+                to={config.basePath + config.hero.ctaSecondaryLink}
                 className="px-8 py-4 font-semibold text-white border-2 border-white rounded-xl hover:bg-white hover:text-gray-900 transition-colors"
               >
                 {config.hero.ctaSecondary}
@@ -103,7 +103,7 @@ export const Home = () => {
           </div>
           <div className="text-center mt-10">
             <Link
-              to="/diensten"
+              to={config.basePath + "/diensten"}
               className="inline-block px-8 py-4 font-semibold text-white rounded-xl transition-opacity hover:opacity-90"
               style={{ backgroundColor: p }}
             >
@@ -146,7 +146,7 @@ export const Home = () => {
             Neem vandaag nog contact op voor een vrijblijvend gesprek.
           </p>
           <Link
-            to="/contact"
+            to={config.basePath + "/contact"}
             className="inline-block px-10 py-4 bg-white font-semibold rounded-xl hover:bg-gray-100 transition-colors"
             style={{ color: p }}
           >

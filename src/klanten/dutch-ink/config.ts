@@ -1,6 +1,7 @@
 import type { DutchInkConfig } from './types';
 
 export const config: DutchInkConfig = {
+  basePath: '/preview/dutch-ink',
   naam: 'Dutch Ink',
   tagline: 'The Tattoo Company',
   beschrijving: 'Vakkundig tattoo- en piercingwerk in een moderne, hygiënische studio. Vaste prijzen, geen verrassingen.',

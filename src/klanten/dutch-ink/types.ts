@@ -28,6 +28,7 @@ export interface Vestiging {
 }
 
 export interface DutchInkConfig {
+  basePath: string;
   naam: string;
   tagline: string;
   beschrijving: string;

@@ -1,6 +1,7 @@
 import type { SjabloonConfig } from './types';
 
 export const config: SjabloonConfig = {
+  basePath: '/preview/sjabloon',
   id: 'sjabloon',
   name: 'Bedrijfsnaam',
   tagline: 'Uw vakkundige partner voor [dienst]',

@@ -93,7 +93,7 @@ export const OverOns = () => {
             Plan een vrijblijvend kennismakingsgesprek en ontdek wat wij voor u kunnen betekenen.
           </p>
           <Link
-            to="/contact"
+            to={config.basePath + "/contact"}
             className="inline-block px-10 py-4 bg-white font-semibold rounded-xl hover:bg-gray-100 transition-colors"
             style={{ color: p }}
           >

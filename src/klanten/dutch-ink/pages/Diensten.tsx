@@ -102,7 +102,7 @@ export const Diensten = () => {
               Bij Dutch Ink werken we niet met een uurtarief. Jij weet vooraf precies wat je betaalt — eerlijk, transparant, zonder verrassingen. Kom langs voor een vrijblijvende prijsopgave.
             </p>
             <Link
-              to="/contact"
+              to={config.basePath + "/contact"}
               className="inline-block px-8 py-3 font-bold uppercase tracking-wider text-white rounded transition-opacity hover:opacity-90"
               style={{ backgroundColor: c.primary }}
             >

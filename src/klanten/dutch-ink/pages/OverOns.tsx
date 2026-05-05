@@ -118,7 +118,7 @@ export const OverOns = () => {
           </h2>
           <p className="text-white/80 mb-8">Walk-in welkom. Geen afspraak nodig.</p>
           <Link
-            to="/contact"
+            to={config.basePath + "/contact"}
             className="inline-block px-10 py-4 bg-black font-bold uppercase tracking-wider text-white rounded hover:bg-gray-900 transition-colors"
           >
             Vind een Vestiging

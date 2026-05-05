@@ -42,14 +42,14 @@ export const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to={config.hero.ctaLink}
+                to={config.basePath + config.hero.ctaLink}
                 className="px-8 py-4 font-bold uppercase tracking-wider text-white rounded transition-opacity hover:opacity-90"
                 style={{ backgroundColor: c.primary }}
               >
                 {config.hero.cta}
               </Link>
               <Link
-                to={config.hero.ctaSecundairLink}
+                to={config.basePath + config.hero.ctaSecundairLink}
                 className="px-8 py-4 font-bold uppercase tracking-wider rounded border transition-colors"
                 style={{ color: c.tekst, borderColor: 'rgba(255,255,255,0.3)' }}
                 onMouseEnter={(e) => {
@@ -131,7 +131,7 @@ export const Home = () => {
           </div>
           <div className="mt-10">
             <Link
-              to="/diensten"
+              to={config.basePath + "/diensten"}
               className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors"
               style={{ color: c.primary }}
             >
@@ -226,7 +226,7 @@ export const Home = () => {
             Loop gewoon binnen. Geen afspraak nodig. Onze artiesten staan voor je klaar.
           </p>
           <Link
-            to="/contact"
+            to={config.basePath + "/contact"}
             className="inline-block px-12 py-5 bg-black font-bold uppercase tracking-wider text-white rounded hover:bg-gray-900 transition-colors"
           >
             Vind een Vestiging →

@@ -77,7 +77,7 @@ export const Diensten = () => {
             Neem contact op voor een vrijblijvend adviesgesprek. Wij helpen u graag de juiste keuze te maken.
           </p>
           <Link
-            to="/contact"
+            to={config.basePath + "/contact"}
             className="inline-block px-10 py-4 font-semibold text-white rounded-xl transition-opacity hover:opacity-90"
             style={{ backgroundColor: p }}
           >

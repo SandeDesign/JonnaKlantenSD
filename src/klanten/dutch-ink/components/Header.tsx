@@ -6,8 +6,13 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path: string) =>
-    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+  const isActive = (path: string) => {
+    const fullPath = config.basePath + path;
+    if (path === '/') {
+      return location.pathname === config.basePath || location.pathname === config.basePath + '/';
+    }
+    return location.pathname.startsWith(fullPath);
+  };
 
   return (
     <header
@@ -17,7 +22,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to={config.basePath + "/"} className="flex items-center gap-3">
             {config.logo ? (
               <img src={config.logo} alt={config.naam} className="h-9 w-auto" />
             ) : (
@@ -43,7 +48,7 @@ export const Header = () => {
             {config.navigation.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                to={config.basePath + link.path}
                 className="text-sm font-medium tracking-wide uppercase transition-colors"
                 style={{
                   color: isActive(link.path) ? config.colors.primary : 'rgba(255,255,255,0.65)',
@@ -53,7 +58,7 @@ export const Header = () => {
               </Link>
             ))}
             <Link
-              to="/contact"
+              to={config.basePath + "/contact"}
               className="px-5 py-2 text-sm font-bold uppercase tracking-wider rounded transition-opacity hover:opacity-90"
               style={{ backgroundColor: config.colors.primary, color: '#fff' }}
             >
@@ -82,7 +87,7 @@ export const Header = () => {
             {config.navigation.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                to={config.basePath + link.path}
                 onClick={() => setMenuOpen(false)}
                 className="px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors"
                 style={{
@@ -94,7 +99,7 @@ export const Header = () => {
               </Link>
             ))}
             <Link
-              to="/contact"
+              to={config.basePath + "/contact"}
               onClick={() => setMenuOpen(false)}
               className="mx-4 mt-2 py-3 text-sm font-bold uppercase tracking-wider text-center rounded"
               style={{ backgroundColor: config.colors.primary, color: '#fff' }}
