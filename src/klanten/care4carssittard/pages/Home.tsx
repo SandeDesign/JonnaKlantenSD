@@ -103,7 +103,7 @@ export const Home = () => {
         <div className="relative container mx-auto px-4">
           <div className="max-w-2xl text-white">
             <p
-              className="text-xs font-bold uppercase tracking-widest mb-5 px-3 py-1.5 rounded-full inline-block"
+              className="text-xs font-bold uppercase tracking-widest mb-3 px-3 py-1.5 rounded-full inline-block"
               style={{ backgroundColor: p, fontFamily: fontBody }}
             >
               RDW Erkend Garagebedrijf · Sittard
@@ -113,12 +113,12 @@ export const Home = () => {
               className="font-extrabold leading-none uppercase"
               style={{ fontFamily: fontLogo, letterSpacing: '0.03em' }}
             >
-              <span className="block text-6xl md:text-8xl">{config.hero.title}</span>
-              <span className="block text-3xl md:text-4xl mt-1 text-gray-300">
+              <span className="block text-6xl md:text-8xl" style={{ lineHeight: '0.95' }}>{config.hero.title}</span>
+              <span className="block text-3xl md:text-4xl mt-0.5 text-gray-300">
                 {config.hero.titleSub}
               </span>
             </h1>
-            <p className="text-base text-gray-300 mt-6 mb-10 leading-relaxed max-w-xl" style={{ fontFamily: fontBody }}>
+            <p className="text-base text-gray-300 mt-3 mb-6 leading-relaxed max-w-xl" style={{ fontFamily: fontBody }}>
               {config.hero.subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
