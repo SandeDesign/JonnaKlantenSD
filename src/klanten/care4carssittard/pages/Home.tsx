@@ -142,9 +142,9 @@ export const Home = () => {
       </section>
 
       {/* Auto Werkzaamheden */}
-      <section className="py-20" style={{ backgroundColor: '#E5E7EB' }}>
+      <section className="py-16" style={{ backgroundColor: '#DDDFE3' }}>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2
               className="text-5xl font-extrabold text-gray-900 mb-3 uppercase"
               style={{ fontFamily: fontLogo }}
@@ -160,7 +160,7 @@ export const Home = () => {
               <FlipCard key={item.id} item={item} />
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-8">
             <Link
               to={config.basePath + '/agenda'}
               className="inline-block px-8 py-4 font-semibold text-white rounded-xl transition-opacity hover:opacity-90 shadow"
@@ -173,47 +173,36 @@ export const Home = () => {
       </section>
 
       {/* Werkwijze */}
-      <section className="py-20" style={{ backgroundColor: '#F3F4F6' }}>
+      <section className="py-12" style={{ backgroundColor: '#E9EAED' }}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=800&h=600&fit=crop"
-                alt="Care4Cars Sittard werkplaats"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-            <div>
-              <h2
-                className="text-5xl font-extrabold text-gray-900 mb-8 uppercase"
-                style={{ fontFamily: fontLogo }}
-              >
-                Werkwijze
-              </h2>
-              <div className="space-y-7">
-                {config.werkwijze.map((item, i) => (
-                  <div key={i} className="flex items-start gap-5">
-                    <div
-                      className="w-14 h-14 rounded-full flex items-center justify-center text-xl flex-shrink-0 border-2 text-white"
-                      style={{ borderColor: p, backgroundColor: p }}
-                    >
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3
-                        className="text-lg font-bold text-gray-900 mb-1 uppercase"
-                        style={{ fontFamily: fontLogo, letterSpacing: '0.03em' }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: fontBody }}>
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+          <h2
+            className="text-4xl font-extrabold text-gray-900 mb-8 uppercase text-center"
+            style={{ fontFamily: fontLogo }}
+          >
+            Werkwijze
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {config.werkwijze.map((item, i) => (
+              <div key={i} className="flex flex-col items-center text-center gap-4">
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center text-xl flex-shrink-0 text-white"
+                  style={{ backgroundColor: p }}
+                >
+                  {item.icon}
+                </div>
+                <div>
+                  <h3
+                    className="text-lg font-bold text-gray-900 mb-1 uppercase"
+                    style={{ fontFamily: fontLogo, letterSpacing: '0.03em' }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: fontBody }}>
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

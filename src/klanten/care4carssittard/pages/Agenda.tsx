@@ -18,11 +18,9 @@ const SERVICES = [
 
 const MONTHS = ['Mei', 'Juni', 'Juli', 'Augustus', 'September'];
 
-// Simulated availability: 0 = free, 1 = almost full, 2 = full, 3 = unavailable (weekend/past)
 const generateDays = (monthIndex: number) => {
   const days: { day: number; status: 0 | 1 | 2 | 3 }[] = [];
   const totalDays = [31, 30, 31, 31, 30][monthIndex];
-  // First day offset (Mei 2026 starts on Friday = index 4)
   const offsets = [4, 0, 2, 5, 1];
   const offset = offsets[monthIndex];
 
@@ -34,7 +32,6 @@ const generateDays = (monthIndex: number) => {
     if (isWeekend) {
       days.push({ day: d, status: 3 });
     } else if (monthIndex === 0 && d < 11) {
-      // past days in current month
       days.push({ day: d, status: 3 });
     } else {
       const r = Math.random();
@@ -96,10 +93,7 @@ export const Agenda = () => {
             >
               ✓
             </div>
-            <h2
-              className="text-3xl font-extrabold text-gray-900 mb-3 uppercase"
-              style={{ fontFamily: fontLogo }}
-            >
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-3 uppercase" style={{ fontFamily: fontLogo }}>
               Afspraak Bevestigd!
             </h2>
             <p className="text-gray-500 mb-2" style={{ fontFamily: fontBody }}>
@@ -117,7 +111,7 @@ export const Agenda = () => {
   return (
     <Layout>
       {/* Info banner */}
-      <section className="py-5 bg-white border-b border-gray-200">
+      <section className="py-4 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-gray-600" style={{ fontFamily: fontBody }}>
             Bij een reparatie/onderhoud/APK, graag de auto brengen voor 9.00 uur.
@@ -128,28 +122,22 @@ export const Agenda = () => {
         </div>
       </section>
 
-      <section className="py-16" style={{ backgroundColor: '#F3F4F6' }}>
+      <section className="py-10" style={{ backgroundColor: '#F3F4F6' }}>
         <div className="container mx-auto px-4">
-          <h1
-            className="text-5xl font-extrabold text-gray-900 mb-10 uppercase"
-            style={{ fontFamily: fontLogo }}
-          >
-            Care<span style={{ color: p }}>4</span>Cars
-          </h1>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {/* Left: services */}
+
+            {/* Left: services + gegevens */}
             <div>
-              <p className="text-sm font-semibold text-gray-600 mb-4 uppercase tracking-wide" style={{ fontFamily: fontBody }}>
+              <p className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-widest" style={{ fontFamily: fontBody }}>
                 Kies één of meerdere werkzaamheden
               </p>
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 {SERVICES.map((s) => {
                   const checked = selectedServices.includes(s);
                   return (
                     <label
                       key={s}
-                      className="flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer border transition-colors"
+                      className="flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer border transition-colors"
                       style={{
                         fontFamily: fontBody,
                         backgroundColor: checked ? '#FEF2F2' : '#fff',
@@ -169,9 +157,9 @@ export const Agenda = () => {
                 })}
               </div>
 
-              {/* Contact fields */}
-              <div className="mt-8 space-y-3">
-                <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide" style={{ fontFamily: fontBody }}>
+              {/* Gegevens */}
+              <div className="mt-6 space-y-2.5">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest" style={{ fontFamily: fontBody }}>
                   Uw gegevens
                 </p>
                 <input
@@ -179,7 +167,7 @@ export const Agenda = () => {
                   placeholder="Naam *"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
                   style={{ fontFamily: fontBody }}
                 />
                 <input
@@ -187,7 +175,7 @@ export const Agenda = () => {
                   placeholder="Telefoonnummer *"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
                   style={{ fontFamily: fontBody }}
                 />
                 <input
@@ -195,7 +183,7 @@ export const Agenda = () => {
                   placeholder="Kenteken"
                   value={licensePlate}
                   onChange={(e) => setLicensePlate(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
                   style={{ fontFamily: fontBody }}
                 />
               </div>
@@ -203,53 +191,64 @@ export const Agenda = () => {
 
             {/* Right: calendar */}
             <div>
-              <p className="text-sm font-semibold text-gray-600 mb-4 uppercase tracking-wide" style={{ fontFamily: fontBody }}>
+              <p className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-widest" style={{ fontFamily: fontBody }}>
                 Kies een beschikbare datum
               </p>
 
-              {/* Month tabs */}
-              <div className="flex gap-2 mb-4 flex-wrap">
-                {MONTHS.map((m, i) => (
-                  <button
-                    key={m}
-                    onClick={() => { setActiveMonth(i); setSelectedDay(null); }}
-                    className="px-4 py-1.5 rounded-lg text-sm font-semibold transition-colors"
-                    style={{
-                      fontFamily: fontBody,
-                      backgroundColor: activeMonth === i ? p : 'transparent',
-                      color: activeMonth === i ? '#fff' : '#6B7280',
-                    }}
-                  >
-                    {m}
-                  </button>
-                ))}
+              {/* Month tabs + Time on same row */}
+              <div className="flex items-center justify-between gap-2 mb-3 flex-wrap">
+                <div className="flex gap-1 flex-wrap">
+                  {MONTHS.map((m, i) => (
+                    <button
+                      key={m}
+                      onClick={() => { setActiveMonth(i); setSelectedDay(null); }}
+                      className="px-3 py-1 rounded-lg text-sm font-semibold transition-colors"
+                      style={{
+                        fontFamily: fontBody,
+                        backgroundColor: activeMonth === i ? p : 'transparent',
+                        color: activeMonth === i ? '#fff' : '#6B7280',
+                      }}
+                    >
+                      {m}
+                    </button>
+                  ))}
+                </div>
+                <select
+                  value={selectedTime}
+                  onChange={(e) => setSelectedTime(e.target.value)}
+                  className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2"
+                  style={{ fontFamily: fontBody, minWidth: '90px' }}
+                >
+                  {TIMES.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
               </div>
 
-              {/* Calendar grid */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                {/* Day headers */}
+              {/* Calendar grid — compact */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <div className="grid grid-cols-7 border-b border-gray-100">
                   {['Maa', 'Din', 'Woe', 'Don', 'Vrij', 'Zat', 'Zon'].map((d) => (
                     <div
                       key={d}
-                      className="text-center py-2 text-xs font-semibold text-gray-400 uppercase"
+                      className="text-center py-1.5 text-xs font-semibold text-gray-400 uppercase"
                       style={{ fontFamily: fontBody }}
                     >
                       {d}
                     </div>
                   ))}
                 </div>
-                {/* Days */}
                 <div className="grid grid-cols-7">
                   {days.map((cell, i) => (
                     <div
                       key={i}
-                      className="aspect-square flex items-center justify-center text-sm font-semibold border border-gray-50 transition-opacity hover:opacity-90"
-                      style={
-                        cell.day === 0
+                      className="flex items-center justify-center text-sm font-semibold border border-gray-50 transition-opacity hover:opacity-90"
+                      style={{
+                        height: '44px',
+                        ...(cell.day === 0
                           ? { backgroundColor: '#F9FAFB' }
-                          : statusStyle(cell.status, selectedDay === cell.day)
-                      }
+                          : statusStyle(cell.status, selectedDay === cell.day)),
+                      }}
                       onClick={() => cell.day > 0 && handleDayClick(cell.day, cell.status)}
                     >
                       {cell.day > 0 ? cell.day : ''}
@@ -259,7 +258,7 @@ export const Agenda = () => {
               </div>
 
               {/* Legend */}
-              <div className="grid grid-cols-4 gap-2 mt-3">
+              <div className="grid grid-cols-4 gap-1.5 mt-2">
                 {[
                   { bg: '#16A34A', label: 'Beschikbaar' },
                   { bg: '#F59E0B', label: 'Bijna vol' },
@@ -268,7 +267,7 @@ export const Agenda = () => {
                 ].map(({ bg, label, textColor }) => (
                   <div
                     key={label}
-                    className="rounded-lg py-2 px-1 text-center text-xs font-semibold"
+                    className="rounded-lg py-1.5 px-1 text-center text-xs font-semibold"
                     style={{ backgroundColor: bg, color: textColor ?? '#fff', fontFamily: fontBody }}
                   >
                     {label}
@@ -276,28 +275,11 @@ export const Agenda = () => {
                 ))}
               </div>
 
-              {/* Time selector */}
-              <div className="mt-5">
-                <p className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide" style={{ fontFamily: fontBody }}>
-                  Tijd:
-                </p>
-                <select
-                  value={selectedTime}
-                  onChange={(e) => setSelectedTime(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2"
-                  style={{ fontFamily: fontBody }}
-                >
-                  {TIMES.map((t) => (
-                    <option key={t} value={t}>{t}</option>
-                  ))}
-                </select>
-              </div>
-
               {/* Submit */}
               <button
                 onClick={() => canSubmit && setSubmitted(true)}
                 disabled={!canSubmit}
-                className="w-full mt-5 py-4 font-semibold text-white rounded-xl transition-opacity"
+                className="w-full mt-4 py-3.5 font-semibold text-white rounded-xl transition-opacity"
                 style={{
                   fontFamily: fontBody,
                   backgroundColor: canSubmit ? p : '#9CA3AF',
@@ -306,13 +288,13 @@ export const Agenda = () => {
                 }}
               >
                 {selectedDay
-                  ? `Afspraak Bevestigen — ${MONTHS[activeMonth]} ${selectedDay} om ${selectedTime}`
+                  ? `Bevestig Afspraak — ${MONTHS[activeMonth]} ${selectedDay} om ${selectedTime}`
                   : 'Selecteer een datum om door te gaan'}
               </button>
 
-              {!canSubmit && (selectedServices.length === 0 || !name || !phone) && (
+              {!canSubmit && (
                 <p className="text-xs text-gray-400 text-center mt-2" style={{ fontFamily: fontBody }}>
-                  Vul alle verplichte velden in en selecteer een werkzaamheid en datum.
+                  Vul naam, telefoonnummer in en selecteer een werkzaamheid en datum.
                 </p>
               )}
             </div>
