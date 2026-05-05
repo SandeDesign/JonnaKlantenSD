@@ -8,13 +8,26 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-gray-50;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  /* Scope serif headings away from care4carssittard which uses Teko */
+  :not([data-client="care4carssittard"]) h1,
+  :not([data-client="care4carssittard"]) h2,
+  :not([data-client="care4carssittard"]) h3,
+  :not([data-client="care4carssittard"]) h4,
+  :not([data-client="care4carssittard"]) h5,
+  :not([data-client="care4carssittard"]) h6 {
     @apply font-serif;
+  }
+
+  [data-client="care4carssittard"] h1,
+  [data-client="care4carssittard"] h2,
+  [data-client="care4carssittard"] h3,
+  [data-client="care4carssittard"] h4 {
+    font-family: 'Teko', sans-serif;
   }
 
   p {

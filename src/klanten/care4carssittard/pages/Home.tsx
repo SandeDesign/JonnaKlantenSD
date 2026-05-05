@@ -142,7 +142,7 @@ export const Home = () => {
       </section>
 
       {/* Auto Werkzaamheden */}
-      <section className="py-16" style={{ backgroundColor: '#DDDFE3' }}>
+      <section className="py-16" style={{ backgroundColor: '#CDD0D6' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2
@@ -173,7 +173,7 @@ export const Home = () => {
       </section>
 
       {/* Werkwijze */}
-      <section className="py-12" style={{ backgroundColor: '#E9EAED' }}>
+      <section className="py-12" style={{ backgroundColor: '#D8DBE0' }}>
         <div className="container mx-auto px-4">
           <h2
             className="text-4xl font-extrabold text-gray-900 mb-8 uppercase text-center"

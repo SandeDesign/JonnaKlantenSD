@@ -94,18 +94,18 @@ export const config: Care4CarsConfig = {
   werkwijze: [
     {
       icon: '☕',
-      title: 'Onder het genot van een kop koffie',
-      description: 'Bij ons kunt u ten allen tijde terecht onder het genot van een kopje koffie.',
+      title: 'Koffie bij uw bezoek',
+      description: 'Wacht u op uw auto? Bij ons bent u altijd welkom voor een kopje koffie. Wij zorgen voor een prettig verblijf terwijl onze monteurs aan uw auto werken.',
     },
     {
       icon: '⚙️',
-      title: 'Goede prijs / kwaliteit verhouding',
-      description: 'We garanderen u een goede prijs/kwaliteit verhouding van al onze services.',
+      title: 'Scherpe & eerlijke prijzen',
+      description: 'Wij hanteren transparante tarieven die aanzienlijk lager liggen dan de meeste dealerbedrijven — zonder concessies te doen aan kwaliteit of service.',
     },
     {
       icon: '❤️',
-      title: 'Een tevreden klant',
-      description: 'Ons streven is dat u als klant ten allen tijde tevreden bent met onze service en producten.',
+      title: 'Uw tevredenheid voorop',
+      description: 'Een tevreden klant is ons hoogste doel. Wij staan voor vakkundig werk, duidelijke communicatie en een service waar u met vertrouwen op terug kunt komen.',
     },
   ],
 };

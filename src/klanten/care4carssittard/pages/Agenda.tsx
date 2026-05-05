@@ -124,10 +124,10 @@ export const Agenda = () => {
 
       <section className="py-10" style={{ backgroundColor: '#F3F4F6' }}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
-            {/* Left: services + gegevens */}
-            <div>
+            {/* Left: services + gegevens — flex col so Kenteken bottom aligns with calendar bottom */}
+            <div className="flex flex-col">
               <p className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-widest" style={{ fontFamily: fontBody }}>
                 Kies één of meerdere werkzaamheden
               </p>
@@ -158,7 +158,7 @@ export const Agenda = () => {
               </div>
 
               {/* Gegevens */}
-              <div className="mt-6 space-y-2.5">
+              <div className="mt-5 space-y-2.5">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest" style={{ fontFamily: fontBody }}>
                   Uw gegevens
                 </p>
