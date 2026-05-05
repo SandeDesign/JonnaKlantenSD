@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  p {
+    @apply font-sans leading-relaxed;
+  }
+
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 font-medium transition-all duration-300 rounded-md;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-amber-600 hover:bg-amber-700;
+  }
+  
+  .btn-secondary {
+    @apply text-gray-800 bg-transparent border border-gray-800 hover:bg-gray-800 hover:text-white;
+  }
+
+  .section-title {
+    @apply mb-2 text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl;
+  }
+  
+  .section-subtitle {
+    @apply mb-8 text-lg text-gray-600 md:text-xl;
+  }
+
+  .fade-in {
+    @apply transition-opacity duration-700 opacity-0;
+  }
+  
+  .fade-in.appear {
+    @apply opacity-100;
+  }
+}
+
+/* Preset CSS Variables */
+[data-preset="editorial"] {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Source Serif 4', serif;
+  --section-spacing: 120px;
+  --card-radius: 0px;
+  --section-bg-alt: #fafaf8;
+}
+
+[data-preset="brutalist"] {
+  --font-heading: 'Space Mono', monospace;
+  --font-body: 'IBM Plex Mono', monospace;
+  --section-spacing: 60px;
+  --card-radius: 0px;
+  --section-bg-alt: #f0f0f0;
+}
+
+[data-preset="soft"] {
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Nunito', sans-serif;
+  --section-spacing: 100px;
+  --card-radius: 24px;
+  --section-bg-alt: #fdf4ff;
+}
+
+[data-preset="corporate"] {
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --section-spacing: 80px;
+  --card-radius: 4px;
+  --section-bg-alt: #f8fafc;
+}
+
+[data-preset="artisan"] {
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Lato', sans-serif;
+  --section-spacing: 100px;
+  --card-radius: 8px;
+  --section-bg-alt: #faf7f2;
+}
+
+[data-preset="playful"] {
+  --font-heading: 'Righteous', cursive;
+  --font-body: 'Quicksand', sans-serif;
+  --section-spacing: 80px;
+  --card-radius: 16px;
+  --section-bg-alt: #f0fdf4;
+}
+
+[data-preset="magazine"] {
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --section-spacing: 80px;
+  --card-radius: 2px;
+  --section-bg-alt: #f5f5f5;
+}
+
+[data-preset="retro"] {
+  --font-heading: 'Abril Fatface', serif;
+  --font-body: 'Karla', sans-serif;
+  --section-spacing: 90px;
+  --card-radius: 12px;
+  --section-bg-alt: #fef9f0;
+}
+
+[data-preset="luxe"] {
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Raleway', sans-serif;
+  --section-spacing: 100px;
+  --card-radius: 0px;
+  --section-bg-alt: #0a0a0a;
+}
+
+[data-preset="tech"] {
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Exo 2', sans-serif;
+  --section-spacing: 80px;
+  --card-radius: 8px;
+  --section-bg-alt: #0f172a;
+}
+
+[data-preset="organic"] {
+  --font-heading: 'Josefin Sans', sans-serif;
+  --font-body: 'Libre Franklin', sans-serif;
+  --section-spacing: 90px;
+  --card-radius: 20px;
+  --section-bg-alt: #f5f0eb;
+}
+
+[data-preset="bold"] {
+  --font-heading: 'Anton', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --section-spacing: 70px;
+  --card-radius: 0px;
+  --section-bg-alt: #fafafa;
+}
+
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  overscroll-behavior-x: none;
+}
+
+body {
+  touch-action: pan-y;
+}
