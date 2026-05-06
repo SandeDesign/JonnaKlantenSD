@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { config } from '../config';
+import { useAfspraak } from './AfspraakContext';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { open } = useAfspraak();
 
   const isActive = (path: string) => {
     const fullPath = config.basePath + path;
@@ -46,13 +48,13 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to={config.basePath + '/contact'}
+            <button
+              onClick={() => open()}
               className="px-4 py-2 text-sm font-semibold text-white rounded-lg transition-opacity hover:opacity-90"
               style={{ backgroundColor: config.colors.primary }}
             >
               Afspraak Maken
-            </Link>
+            </button>
           </nav>
 
           {/* Mobile toggle */}
@@ -83,14 +85,13 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to={config.basePath + '/contact'}
-              onClick={() => setMenuOpen(false)}
+            <button
+              onClick={() => { setMenuOpen(false); open(); }}
               className="mx-4 mt-2 px-4 py-2 text-sm font-semibold text-white rounded-lg text-center transition-opacity hover:opacity-90"
               style={{ backgroundColor: config.colors.primary }}
             >
               Afspraak Maken
-            </Link>
+            </button>
           </nav>
         )}
       </div>
