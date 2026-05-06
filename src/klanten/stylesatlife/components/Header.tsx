@@ -32,7 +32,9 @@ export const Header = () => {
               <p className="text-sm font-bold leading-tight" style={{ color: config.colors.primary }}>
                 Cleanfirm
               </p>
-              <p className="text-xs text-gray-500 leading-tight">Stylesatlife</p>
+              <p className="text-xs font-bold leading-tight" style={{ color: config.colors.primary }}>
+                Stylesatlife
+              </p>
             </div>
           </Link>
 

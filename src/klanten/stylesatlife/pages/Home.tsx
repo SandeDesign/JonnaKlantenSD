@@ -25,8 +25,10 @@ export const Home = () => {
               {config.tagline}
             </p>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6" style={titleFont}>
-              {config.hero.title}{' '}
-              <span style={{ color: config.colors.secondary }}>{config.hero.highlight}</span>
+              {config.hero.title}
+              <br />
+              Cleanfirm{' '}
+              <span style={{ color: config.colors.secondary }}>Stylesatlife</span>
             </h1>
             <p className="text-xl text-gray-200 mb-10 leading-relaxed">
               {config.hero.subtitle}

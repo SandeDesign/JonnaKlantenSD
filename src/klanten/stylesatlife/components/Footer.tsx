@@ -11,11 +11,10 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Branding */}
           <div className="md:col-span-1">
-            <img
-              src="https://cleanfirm.net/wp-content/uploads/2020/07/cropped-bc318426-3415-472a-9dd6-9823b5fca7fe-1.jpeg"
-              alt="Cleanfirm Stylesatlife"
-              className="h-14 w-auto object-contain mb-4 brightness-0 invert"
-            />
+            <Link to={config.basePath + '/'} className="inline-block mb-4 transition-opacity hover:opacity-80">
+              <p className="text-lg font-bold leading-tight text-white">Cleanfirm</p>
+              <p className="text-lg font-bold leading-tight" style={{ color: config.colors.secondary }}>Stylesatlife</p>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">{config.tagline}</p>
             <p className="text-gray-500 text-xs mt-3">{config.contact.city}</p>
           </div>

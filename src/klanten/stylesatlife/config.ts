@@ -29,12 +29,10 @@ export const config: StylesatlifeConfig = {
   },
 
   navigation: [
-    { label: 'Home', path: '/' },
     { label: 'Over Ons', path: '/over-ons' },
     { label: 'Diensten', path: '/diensten' },
     { label: 'Resultaten', path: '/resultaten' },
     { label: 'Schoonmaaktips', path: '/tips' },
-    { label: 'Contact', path: '/contact' },
   ],
 
   hero: {
