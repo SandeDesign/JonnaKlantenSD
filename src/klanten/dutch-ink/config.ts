@@ -7,32 +7,34 @@ export const config: DutchInkConfig = {
   beschrijving: 'Vakkundig tattoo- en piercingwerk in een moderne, hygiënische studio. Vaste prijzen, geen verrassingen.',
 
   colors: {
-    primary: '#DC2626',
-    primaryHover: '#B91C1C',
-    primaryLight: 'rgba(220,38,38,0.12)',
+    primary: '#D4A017',
+    primaryHover: '#B8890F',
+    primaryLight: 'rgba(212,160,23,0.12)',
     achtergrond: '#0D0D0D',
     kaart: '#1A1A1A',
     tekst: '#FFFFFF',
   },
 
-  // Vervang door de echte logo URL, bijv. uit het CMS of als lokaal bestand
-  logo: undefined,
+  logo: 'https://dutchink.nl/wp-content/uploads/2025/10/wijzijndutchink.png',
 
   navigation: [
-    { label: 'Home', path: '/' },
-    { label: 'Over Ons', path: '/over-ons' },
-    { label: 'Diensten', path: '/diensten' },
+    { label: 'Over Dutch Ink', path: '/over-ons' },
+    { label: 'Blog', path: '/over-ons' },
+    { label: 'Uitgebreide Tattoo-gids', path: '/diensten' },
+    { label: 'Tattoos', path: '/diensten' },
+    { label: 'Piercing', path: '/diensten' },
+    { label: 'Permanente make-up', path: '/diensten' },
     { label: 'Contact', path: '/contact' },
   ],
 
   hero: {
-    titel: 'Jouw Verhaal.\nOns Vakmanschap.',
+    titel: 'Tattoos voor het leven.\nDutch Ink voor altijd.',
     subtitel: 'Topkwaliteit tattoos, piercings en PMU bij Dutch Ink — de tattoo company van Nederland. Walk-in welkom, vaste prijzen, geen verrassingen.',
-    afbeelding: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1920&h=1080&fit=crop',
-    cta: 'Bekijk Onze Diensten',
-    ctaLink: '/diensten',
-    ctaSecundair: 'Kom Langs',
-    ctaSecundairLink: '/contact',
+    afbeelding: 'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1920&h=1080&fit=crop',
+    cta: 'Plan jouw Piercingafspraak',
+    ctaLink: '/contact',
+    ctaSecundair: 'Wie zijn wij?',
+    ctaSecundairLink: '/over-ons',
   },
 
   stats: [
@@ -132,7 +134,7 @@ export const config: DutchInkConfig = {
   ],
 
   vestigingen: [
-    { naam: 'Vlaardingen (hoofdvestiging)', adres: 'George Stephensonweg 21M, 3133 KJ Vlaardingen', telefoon: '010-8700528', whatsapp: '06-44444350' },
+    { naam: 'Vlaardingen (hoofdvestiging)', adres: 'George Stephensonweg 21, 3133 KJ Vlaardingen', telefoon: '010-8700528', whatsapp: '06-44444350' },
     { naam: 'Amsterdam', adres: 'Amsterdam' },
     { naam: 'Den Haag', adres: 'Den Haag' },
     { naam: 'Hoek van Holland', adres: 'Hoek van Holland' },
@@ -147,18 +149,26 @@ export const config: DutchInkConfig = {
 
   openingstijden: [
     { dag: 'Maandag', tijden: 'Gesloten' },
-    { dag: 'Dinsdag – Zondag', tijden: 'Vanaf 11:00 (tot iedereen geholpen is)' },
+    { dag: 'Di t/m Za', tijden: '12:00 – 20:00' },
+    { dag: 'Zondag', tijden: '12:00 – 18:00' },
     { dag: 'Piercings (Vr + Zo)', tijden: '11:00 – 17:00' },
   ],
 
-  email: 'info@dutchink.nl',
+  email: 'floormanagers@dutchink.nl',
+
+  socials: {
+    instagram: 'https://instagram.com/dutchink',
+    facebook: 'https://facebook.com/dutchink',
+    tiktok: 'https://tiktok.com/@dutchink',
+    youtube: 'https://youtube.com/@dutchink',
+  },
 
   testimonials: [
     {
       id: 1,
       naam: 'Remy V.',
       rating: 5,
-      tekst: 'Super professioneel en relaxte sfeer. Mijn tattoo is precies zoals ik het wilde. De prijs was meteen duidelijk, geen verassingen achteraf. Zeker voor herhaling vatbaar!',
+      tekst: 'Super professioneel en relaxte sfeer. Mijn tattoo is precies zoals ik het wilde. De prijs was meteen duidelijk, geen verrassingen achteraf. Zeker voor herhaling vatbaar!',
       vestiging: 'Vlaardingen',
     },
     {

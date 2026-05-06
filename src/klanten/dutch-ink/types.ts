@@ -5,8 +5,8 @@ export interface NavLink {
 
 export interface Service {
   id: string;
-  name: string;
-  description: string;
+  naam: string;
+  beschrijving: string;
   icon: string;
   highlights: string[];
   note?: string;
@@ -14,9 +14,9 @@ export interface Service {
 
 export interface Testimonial {
   id: number;
-  name: string;
+  naam: string;
   rating: number;
-  text: string;
+  tekst: string;
   vestiging?: string;
 }
 
@@ -57,5 +57,11 @@ export interface DutchInkConfig {
   vestigingen: Vestiging[];
   openingstijden: { dag: string; tijden: string }[];
   email: string;
+  socials: {
+    instagram: string;
+    facebook: string;
+    tiktok: string;
+    youtube: string;
+  };
   testimonials: Testimonial[];
 }
