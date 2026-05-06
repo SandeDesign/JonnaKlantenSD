@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { config } from '../config';
 
-const titleFont = { fontFamily: "'Playfair Display', Georgia, serif" };
+const titleFont = { fontFamily: "'Nunito', sans-serif" };
 
 export const Diensten = () => {
   const p = config.colors.primary;

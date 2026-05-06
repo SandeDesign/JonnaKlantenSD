@@ -29,11 +29,11 @@ export const Header = () => {
               className="h-12 w-auto object-contain"
             />
             <div className="hidden sm:block">
-              <p className="text-sm font-bold leading-tight" style={{ color: config.colors.primary }}>
-                Cleanfirm
-              </p>
-              <p className="text-xs font-bold leading-tight" style={{ color: config.colors.primary }}>
+              <p className="text-base font-bold leading-tight" style={{ color: config.colors.primary }}>
                 Stylesatlife
+              </p>
+              <p className="text-xs leading-tight text-gray-400 font-medium">
+                cleanfirm
               </p>
             </div>
           </Link>

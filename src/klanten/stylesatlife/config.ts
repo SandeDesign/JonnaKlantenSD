@@ -166,7 +166,7 @@ export const config: StylesatlifeConfig = {
     title: 'Over Cleanfirm Stylesatlife',
     story: 'Cleanfirm Stylesatlife is een professioneel schoonmaakbedrijf gevestigd in Geleen, hart van Limburg. Wij bedienen particulieren, ondernemers en instellingen door de gehele regio Limburg en Brabant. Met een gedreven team van ervaren schoonmaakprofessionals leveren wij dag in dag uit vlekkeloos werk.',
     mission: 'Onze missie is eenvoudig: u een schone, gezonde en prettige leef- en werkomgeving bieden. Wij werken met milieuvriendelijke middelen, houden ons aan strikte kwaliteitsstandaarden en zorgen altijd voor een persoonlijke benadering. Een tevreden klant is ons grootste compliment.',
-    image: 'https://images.unsplash.com/photo-1527515637462-cff94ebb83ad?w=1200&h=800&fit=crop',
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=1200&h=800&fit=crop',
     values: [
       'Kwaliteit zonder compromis',
       'Milieubewust & verantwoord',

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { config } from '../config';
 
-const titleFont = { fontFamily: "'Playfair Display', Georgia, serif" };
+const titleFont = { fontFamily: "'Nunito', sans-serif" };
 
 export const OverOns = () => {
   const p = config.colors.primary;
@@ -23,7 +23,7 @@ export const OverOns = () => {
       </section>
 
       {/* Ons verhaal */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
@@ -35,7 +35,7 @@ export const OverOns = () => {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src={config.about.image}
+                src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=1200&h=800&fit=crop"
                 alt={config.name}
                 className="w-full h-80 object-cover"
               />
@@ -70,24 +70,28 @@ export const OverOns = () => {
       </section>
 
       {/* Kernwaarden */}
-      <section className="py-20">
+      <section className="py-20" style={{ backgroundColor: config.colors.text }}>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-14" style={{ ...titleFont, color: config.colors.text }}>
+          <h2 className="text-3xl font-bold text-center mb-14 text-white" style={titleFont}>
             Onze Kernwaarden
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {config.about.values.map((value, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                className="flex items-center gap-4 rounded-xl p-5 border-l-4 hover:scale-[1.02] transition-transform"
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.07)',
+                  borderLeftColor: config.colors.secondary,
+                }}
               >
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0 text-sm"
-                  style={{ backgroundColor: p }}
+                  className="w-9 h-9 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm"
+                  style={{ backgroundColor: config.colors.secondary, color: config.colors.text }}
                 >
                   {i + 1}
                 </div>
-                <p className="font-medium" style={{ color: config.colors.text }}>{value}</p>
+                <p className="font-semibold text-white">{value}</p>
               </div>
             ))}
           </div>
@@ -102,7 +106,7 @@ export const OverOns = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {config.features.map((f, i) => (
-              <div key={i} className="text-center p-6 bg-white rounded-2xl shadow-sm">
+              <div key={i} className="text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="text-4xl mb-4">{f.icon}</div>
                 <h3 className="text-lg font-bold mb-2" style={{ color: config.colors.text }}>
                   {f.title}

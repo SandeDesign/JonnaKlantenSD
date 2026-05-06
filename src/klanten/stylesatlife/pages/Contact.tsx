@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Layout } from '../components/Layout';
 import { config } from '../config';
 
-const titleFont = { fontFamily: "'Playfair Display', Georgia, serif" };
+const titleFont = { fontFamily: "'Nunito', sans-serif" };
 
 interface FormState {
   naam: string;
