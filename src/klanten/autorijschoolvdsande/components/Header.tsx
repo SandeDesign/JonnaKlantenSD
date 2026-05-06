@@ -2,29 +2,36 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { config } from '../config';
 
+const c = config.colors;
+
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path: string) => {
-    const fullPath = config.basePath + path;
-    return location.pathname.startsWith(fullPath);
-  };
+  const isActive = (path: string) =>
+    location.pathname.startsWith(config.basePath + path);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <header
+      className="sticky top-0 z-50 shadow-md"
+      style={{ background: `linear-gradient(135deg, ${c.gradientFrom} 0%, ${c.gradientMid} 100%)` }}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to={config.basePath + '/over-van-der-sande'} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          {/* Logo — wit op paarse achtergrond */}
+          <Link
+            to={config.basePath + '/'}
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+          >
             <img
               src={config.logoUrl}
               alt="Autorijschool van der Sande"
               className="h-12 w-auto"
+              style={{ filter: 'brightness(0) invert(1)' }}
             />
             <div className="hidden sm:block leading-tight">
-              <p className="text-xs font-bold" style={{ color: config.colors.primary }}>Autorijschool</p>
-              <p className="text-xs font-bold" style={{ color: config.colors.primary }}>van der Sande</p>
+              <p className="text-xs font-bold text-white/90 tracking-wide">Autorijschool</p>
+              <p className="text-xs font-bold text-white tracking-wide">van der Sande</p>
             </div>
           </Link>
 
@@ -34,16 +41,14 @@ export const Header = () => {
               <Link
                 key={link.path}
                 to={config.basePath + link.path}
-                className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                  isActive(link.path)
-                    ? 'border-b-2 pb-0.5'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+                className="text-sm font-medium transition-all whitespace-nowrap pb-0.5"
                 style={
                   isActive(link.path)
-                    ? { color: config.colors.primary, borderColor: config.colors.primary }
-                    : {}
+                    ? { color: 'white', borderBottom: '2px solid white' }
+                    : { color: 'rgba(255,255,255,0.75)' }
                 }
+                onMouseEnter={e => { if (!isActive(link.path)) e.currentTarget.style.color = 'white'; }}
+                onMouseLeave={e => { if (!isActive(link.path)) e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; }}
               >
                 {link.label}
               </Link>
@@ -52,7 +57,7 @@ export const Header = () => {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="lg:hidden p-2 text-white/80 hover:text-white transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menu"
           >
@@ -64,16 +69,21 @@ export const Header = () => {
 
         {/* Mobile nav */}
         {menuOpen && (
-          <nav className="lg:hidden border-t border-gray-100 py-4 flex flex-col gap-1">
+          <nav
+            className="lg:hidden border-t py-4 flex flex-col gap-1"
+            style={{ borderColor: 'rgba(255,255,255,0.2)' }}
+          >
             {config.navigation.map((link) => (
               <Link
                 key={link.path}
                 to={config.basePath + link.path}
                 onClick={() => setMenuOpen(false)}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  isActive(link.path) ? 'text-white' : 'text-gray-600 hover:bg-gray-50'
-                }`}
-                style={isActive(link.path) ? { backgroundColor: config.colors.primary } : {}}
+                className="px-4 py-2.5 text-sm font-medium rounded-lg transition-colors"
+                style={
+                  isActive(link.path)
+                    ? { backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }
+                    : { color: 'rgba(255,255,255,0.8)' }
+                }
               >
                 {link.label}
               </Link>

@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { OverVanDerSande } from './pages/OverVanDerSande';
 import { PraktijkTheorie } from './pages/PraktijkTheorie';
@@ -10,7 +10,7 @@ import { Contact } from './pages/Contact';
 
 export const AutorijschoolVdSande = () => (
   <Routes>
-    <Route path="/" element={<Navigate to="over-van-der-sande" replace />} />
+    <Route path="/" element={<Home />} />
     <Route path="/over-van-der-sande" element={<OverVanDerSande />} />
     <Route path="/praktijk-theorie" element={<PraktijkTheorie />} />
     <Route path="/auto" element={<Auto />} />

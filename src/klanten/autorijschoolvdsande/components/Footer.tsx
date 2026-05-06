@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { config } from '../config';
 
+const c = config.colors;
+
 export const Footer = () => {
   const year = new Date().getFullYear();
-  const p = config.colors.primary;
 
   return (
-    <footer style={{ backgroundColor: config.colors.primary }} className="text-white">
+    <footer style={{ background: `linear-gradient(135deg, ${c.accent} 0%, ${c.gradientFrom} 100%)` }} className="text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Branding */}
@@ -14,14 +15,16 @@ export const Footer = () => {
             <img
               src={config.logoUrl}
               alt="Autorijschool van der Sande"
-              className="h-16 w-auto mb-3 brightness-0 invert"
+              className="h-16 w-auto mb-4"
+              style={{ filter: 'brightness(0) invert(1)' }}
             />
-            <p className="text-white/70 text-sm leading-relaxed mt-2">{config.tagline}</p>
+            <p className="text-white/60 text-sm leading-relaxed">{config.tagline}</p>
+            <p className="text-white/40 text-xs mt-2">{config.contact.address}</p>
           </div>
 
           {/* Nav */}
           <div>
-            <h4 className="font-semibold mb-4 text-white">Navigatie</h4>
+            <h4 className="font-bold text-sm mb-4 text-white uppercase tracking-wider">Navigatie</h4>
             <ul className="space-y-2">
               {config.navigation.map((link) => (
                 <li key={link.path}>
@@ -38,7 +41,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-white">Contact</h4>
+            <h4 className="font-bold text-sm mb-4 text-white uppercase tracking-wider">Contact</h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>{config.contact.address}</li>
               <li>
@@ -51,20 +54,19 @@ export const Footer = () => {
                   {config.contact.email}
                 </a>
               </li>
+              <li className="pt-1 text-white/40 text-xs">Lessen op afspraak, ma–za</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+        <div
+          className="mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.35)' }}
+        >
           <p>© {year} Autorijschool van der Sande. Alle rechten voorbehouden.</p>
           <p>
             Website door{' '}
-            <a
-              href="https://sandedesign.nl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
+            <a href="https://sandedesign.nl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               SandeDesign
             </a>
           </p>

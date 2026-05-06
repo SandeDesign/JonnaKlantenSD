@@ -5,19 +5,27 @@ export const config = {
   tagline: 'Jouw rijbewijs is mijn reclame!',
   description: 'Autorijschool met 30+ jaar ervaring in Sittard-Geleen. 90% van de leerlingen slaagt de eerste keer.',
 
+  // Palet direct afgeleid van de screenshot-gradient:
+  // links (donkerste) → midden (balans) → rechts (wit met violet-hint)
   colors: {
-    primary: '#1B2D80',
-    primaryHover: '#152166',
-    primaryLight: '#ECEAF8',
-    purple: '#7878B2',
-    text: '#1E293B',
-    background: '#FFFFFF',
+    gradientFrom:  '#7474B2',   // donkerste paars — linker kant gradient
+    gradientMid:   '#9898C8',   // midden balans
+    gradientLight: '#F0EEF8',   // wit met violet-hint — rechter kant gradient
+
+    primary:       '#6B6BAA',   // knoppen, actieve nav, accenten
+    primaryHover:  '#5959A0',
+    primaryLight:  '#EDEDF7',   // subtiele paarse achtergrond voor secties
+
+    accent:        '#2D2B7A',   // donker paars voor footer, sterke CTA-balk
+    text:          '#1E1E4A',   // donker maar paars-getint voor koppen
+    textBody:      '#4A4870',   // body tekst
+    background:    '#F8F7FC',   // niet puur wit — hele lichte violet tint
   },
 
   logoUrl: 'https://www.autorijschoolvdsande.nl/wp-content/uploads/2021/02/jubileum-mike.svg',
 
   contact: {
-    address: 'Sittard-Geleen',
+    address: 'Geleen, Sittard-Geleen',
     phone: '06-12345678',
     email: 'info@autorijschoolvdsande.nl',
     hours: {
@@ -46,23 +54,32 @@ export const config = {
     {
       icon: '🏆',
       title: '90% eerste keer geslaagd',
-      description: 'Veruit boven het regionale gemiddelde van 55–60%. Kwaliteit die zich terugbetaalt.',
+      description: 'Veruit boven het regionale gemiddelde van 55–60%.',
     },
     {
       icon: '🚗',
-      title: 'Moderne lesauto',
+      title: 'Moderne Mercedes lesauto',
       description: 'Rij in een gloednieuwe Mercedes met de nieuwste veiligheidssystemen.',
     },
     {
       icon: '🎯',
       title: 'Op maat opleiding',
-      description: 'Regulier of spoedopleiding — altijd afgestemd op jouw tempo en leerstijl.',
+      description: 'Regulier of spoed — altijd afgestemd op jouw tempo.',
     },
     {
       icon: '💪',
       title: '30+ jaar ervaring',
-      description: 'Een doorgewinterde rij-instructeur die precies weet hoe hij jou het snelst laat slagen.',
+      description: 'Doorgewinterd rij-instructeur die jou het snelst laat slagen.',
     },
+  ],
+
+  sections: [
+    { path: '/over-van-der-sande', icon: '👤', label: 'Even voorstellen', desc: 'Wie is Mike van der Sande? Zijn verhaal, passie en aanpak.' },
+    { path: '/praktijk-theorie',   icon: '📚', label: 'Praktijk & Theorie', desc: 'Alles over de rijopleiding: regulier, spoed en theorie.' },
+    { path: '/auto',               icon: '🚗', label: 'De lesauto',         desc: 'Gloednieuwe Mercedes met alle moderne veiligheidssystemen.' },
+    { path: '/prijzen',            icon: '💶', label: 'Prijzen',            desc: 'Eerlijk geprijsd. Minder lessen nodig = lagere totaalkosten.' },
+    { path: '/geslaagden',         icon: '🎉', label: 'Geslaagden',         desc: 'Trots op al onze geslaagde leerlingen door de jaren heen.' },
+    { path: '/contact',            icon: '✉️', label: 'Contact',            desc: 'Stel een vraag of meld je aan — vrijblijvend en snel.' },
   ],
 
   geslaagden: [
