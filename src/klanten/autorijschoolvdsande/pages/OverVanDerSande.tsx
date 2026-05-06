@@ -19,12 +19,12 @@ export const OverVanDerSande = () => (
     {/* Bio */}
     <section className="py-20" style={{ backgroundColor: c.primaryLight }}>
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
           {/* Foto */}
-          <div>
-            <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ maxHeight: '480px' }}>
+          <div className="lg:col-span-2">
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img src="https://www.autorijschoolvdsande.nl/wp-content/uploads/2021/02/Mike_ZW_02-683x1024.jpg"
-                alt="Mike van der Sande" className="w-full h-full object-cover object-top" style={{ maxHeight: '480px' }} />
+                alt="Mike van der Sande" className="w-full h-auto" />
             </div>
             <blockquote className="mt-6 text-xl font-extrabold" style={{ color: c.gradientFrom }}>
               "Jouw rijbewijs is mijn reclame!"
@@ -32,7 +32,7 @@ export const OverVanDerSande = () => (
           </div>
 
           {/* Tekst */}
-          <div className="space-y-5 text-sm leading-relaxed" style={{ color: c.textBody }}>
+          <div className="lg:col-span-3 space-y-5 text-sm leading-relaxed" style={{ color: c.textBody }}>
             <p>
               Mijn naam is Mike van der Sande, geboren en getogen in Geleen. Ik kom uit een echt ondernemersgezin waarbij hard en goed werken ons met de paplepel is ingegoten. Tijdens mijn studie aan het MEAO te Sittard, kwam ik er al snel achter dat de boekhoudkundige richting niét mijn ding was — al snel schreef ik me in bij de rij-instructeur opleiding.
             </p>
