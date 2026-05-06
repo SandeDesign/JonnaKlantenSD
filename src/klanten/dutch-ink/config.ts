@@ -27,7 +27,7 @@ export const config: DutchInkConfig = {
   hero: {
     titel: 'Tattoos voor het leven.\nDutch Ink voor altijd.',
     subtitel: 'Topkwaliteit tattoos, piercings en PMU bij Dutch Ink — de tattoo company van Nederland. Walk-in welkom, vaste prijzen, geen verrassingen.',
-    afbeelding: 'https://images.unsplash.com/photo-1562631409-0994e9e0e4df?w=1920&h=1080&fit=crop',
+    afbeelding: 'https://plus.unsplash.com/premium_photo-1661779228112-500334846cb3?w=1920&h=1080&fit=crop&auto=format',
     cta: 'Plan jouw Piercingafspraak',
     ctaLink: '/contact',
     ctaSecundair: 'Wie zijn wij?',
