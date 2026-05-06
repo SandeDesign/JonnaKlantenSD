@@ -13,13 +13,13 @@ interface KlantCard {
 
 const klanten: KlantCard[] = [
   {
-    naam: 'Alfa Taxi Limo Sittard',
-    branche: 'Taxi & Limousine',
-    beschrijving: 'Betrouwbaar taxivervoer en limousinediensten in de regio Sittard-Geleen. 24/7 beschikbaar, vaste tarieven en online boeken.',
-    pad: '/preview/alfa-taxi-limo-sittard',
-    kleur: '#1E293B',
-    accent: '#DC2626',
-    icon: '🚕',
+    naam: 'Alfa Taxi',
+    branche: 'Taxivervoer',
+    beschrijving: 'Betrouwbaar en comfortabel taxivervoer 24/7. Vaste tarieven voor particulieren en zakelijk.',
+    pad: '/preview/alfa-taxi',
+    kleur: '#0B1D3E',
+    accent: '#F59E0B',
+    icon: '🚖',
     status: 'concept',
   },
   {

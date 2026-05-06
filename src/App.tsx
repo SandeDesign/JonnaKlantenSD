@@ -3,7 +3,7 @@ import { KlantenOverzicht } from './pages/KlantenOverzicht';
 import { Sjabloon } from './klanten/sjabloon';
 import { DutchInk } from './klanten/dutch-ink';
 import { Care4CarsSittard } from './klanten/care4carssittard';
-import { AlfaTaxiLimoSittard } from './klanten/alfa-taxi-limo-sittard';
+import { AlfaTaxi } from './klanten/alfa-taxi';
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         <Route path="/preview/dutch-ink/*" element={<DutchInk />} />
         <Route path="/preview/care4carssittard" element={<Care4CarsSittard />} />
         <Route path="/preview/care4carssittard/*" element={<Care4CarsSittard />} />
-        <Route path="/preview/alfa-taxi-limo-sittard" element={<AlfaTaxiLimoSittard />} />
-        <Route path="/preview/alfa-taxi-limo-sittard/*" element={<AlfaTaxiLimoSittard />} />
+        <Route path="/preview/alfa-taxi" element={<AlfaTaxi />} />
+        <Route path="/preview/alfa-taxi/*" element={<AlfaTaxi />} />
       </Routes>
     </BrowserRouter>
   );
