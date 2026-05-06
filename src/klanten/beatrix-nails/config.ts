@@ -34,7 +34,7 @@ export const config: BeatrixConfig = {
 
   navigation: [
     { label: 'Home', path: '/' },
-    { label: 'Over Ons', path: '/over-ons' },
+    { label: 'Over Beatrix', path: '/over-ons' },
     { label: 'Diensten', path: '/diensten' },
     { label: 'Contact', path: '/contact' },
   ],

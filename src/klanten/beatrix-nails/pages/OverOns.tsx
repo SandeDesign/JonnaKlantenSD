@@ -14,7 +14,7 @@ export const OverOns = () => {
       >
         <div className="container mx-auto px-4">
           <p className="text-sm font-semibold uppercase tracking-widest mb-3 opacity-60">Beatrix Nails & Beauty</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Over Ons</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Over Beatrix</h1>
           <p className="max-w-xl mx-auto opacity-70">{config.tagline}</p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export const OverOns = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: p }}>
-                Ons Verhaal
+                Over Beatrix
               </p>
               <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: config.colors.text }}>
                 Vakkundige handen, warm hart
