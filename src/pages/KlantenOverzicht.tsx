@@ -13,6 +13,16 @@ interface KlantCard {
 
 const klanten: KlantCard[] = [
   {
+    naam: 'Alfa Taxi',
+    branche: 'Taxivervoer',
+    beschrijving: 'Betrouwbaar en comfortabel taxivervoer 24/7. Vaste tarieven voor particulieren en zakelijk.',
+    pad: '/preview/alfa-taxi',
+    kleur: '#0B1D3E',
+    accent: '#F59E0B',
+    icon: '🚖',
+    status: 'concept',
+  },
+  {
     naam: 'Care4Cars Sittard',
     branche: 'Garage & APK',
     beschrijving: 'RDW erkend garagebedrijf in Sittard. APK, onderhoud, banden, airco, diagnose en campers.',
