@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout';
 import { config } from '../config';
 import type { GalleryItem } from '../types';
 
-const titleFont = { fontFamily: "'Nunito', sans-serif" };
+const titleFont = { fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800 as const };
 
 const categories: { key: GalleryItem['category'] | 'alle'; label: string }[] = [
   { key: 'alle', label: 'Alle Resultaten' },

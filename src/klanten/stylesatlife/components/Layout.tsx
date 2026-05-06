@@ -13,13 +13,13 @@ export const Layout = ({ children }: LayoutProps) => {
       const link = document.createElement('link');
       link.id = 'stylesatlife-font';
       link.rel = 'stylesheet';
-      link.href = 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap';
+      link.href = 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap';
       document.head.appendChild(link);
     }
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ fontFamily: "'Nunito', sans-serif" }}>
+    <div className="min-h-screen flex flex-col" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
