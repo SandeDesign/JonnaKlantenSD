@@ -35,7 +35,8 @@ export const Home = () => {
               {config.tagline}
             </span>
             <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05] mb-6 text-white">
-              {config.hero.title}
+              Altijd op tijd,<br />
+              Altijd comfortabel
             </h1>
             <p className="text-lg md:text-xl mb-10 leading-relaxed max-w-lg" style={{ color: MUTED }}>
               {config.hero.subtitle}

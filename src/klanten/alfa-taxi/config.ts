@@ -4,7 +4,7 @@ export const config: AlfaTaxiConfig = {
   basePath: '/preview/alfa-taxi',
   id: 'alfa-taxi',
   name: 'Alfa Taxi',
-  tagline: 'Betrouwbaar en comfortabel taxivervoer',
+  tagline: 'Taxiservice vanuit Sittard & omgeving',
   description: 'Alfa Taxi staat voor punctueel, veilig en comfortabel vervoer. Of u nu naar het vliegveld moet, een zakelijke afspraak heeft of gewoon een rit nodig heeft — wij rijden voor u.',
   logo: '/cropped-logo.png',
 
