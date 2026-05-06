@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { config } from '../config';
 
-const titleFont = { fontFamily: "'Nunito', sans-serif" };
+const titleFont = { fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800 as const };
 
 export const Tips = () => {
   const p = config.colors.primary;
