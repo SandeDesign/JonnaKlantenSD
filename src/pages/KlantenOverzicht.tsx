@@ -53,6 +53,16 @@ const klanten: KlantCard[] = [
     status: 'concept',
   },
   {
+    naam: 'Autorijschool van der Sande',
+    branche: 'Autorijschool',
+    beschrijving: '30+ jaar ervaring in Sittard-Geleen. 90% slaagt de eerste keer. Moderne Mercedes lesauto, reguliere en spoedopleiding.',
+    pad: '/preview/autorijschoolvdsande',
+    kleur: '#1B2D80',
+    accent: '#7878B2',
+    icon: '🚗',
+    status: 'concept',
+  },
+  {
     naam: 'Sjabloon',
     branche: 'Generiek Template',
     beschrijving: 'Het basis-sjabloon voor nieuwe klanten. Kopieer deze map en pas config.ts aan om te starten.',

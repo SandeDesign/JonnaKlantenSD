@@ -6,6 +6,7 @@ import { Care4CarsSittard } from './klanten/care4carssittard';
 import { AlfaTaxi } from './klanten/alfa-taxi';
 import { BeatrixNails } from './klanten/beatrix-nails';
 import { TonDirkxFotografie } from './klanten/ton-dirkx-fotografie';
+import { AutorijschoolVdSande } from './klanten/autorijschoolvdsande';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/preview/beatrix-nails/*" element={<BeatrixNails />} />
         <Route path="/preview/ton-dirkx-fotografie" element={<TonDirkxFotografie />} />
         <Route path="/preview/ton-dirkx-fotografie/*" element={<TonDirkxFotografie />} />
+        <Route path="/preview/autorijschoolvdsande" element={<AutorijschoolVdSande />} />
+        <Route path="/preview/autorijschoolvdsande/*" element={<AutorijschoolVdSande />} />
       </Routes>
     </BrowserRouter>
   );
