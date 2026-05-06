@@ -7,6 +7,7 @@ import { AlfaTaxi } from './klanten/alfa-taxi';
 import { BeatrixNails } from './klanten/beatrix-nails';
 import { TonDirkxFotografie } from './klanten/ton-dirkx-fotografie';
 import { AutorijschoolVdSande } from './klanten/autorijschoolvdsande';
+import { Stylesatlife } from './klanten/stylesatlife';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
         <Route path="/preview/ton-dirkx-fotografie/*" element={<TonDirkxFotografie />} />
         <Route path="/preview/autorijschoolvdsande" element={<AutorijschoolVdSande />} />
         <Route path="/preview/autorijschoolvdsande/*" element={<AutorijschoolVdSande />} />
+        <Route path="/preview/stylesatlife" element={<Stylesatlife />} />
+        <Route path="/preview/stylesatlife/*" element={<Stylesatlife />} />
       </Routes>
     </BrowserRouter>
   );

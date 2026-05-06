@@ -63,6 +63,16 @@ const klanten: KlantCard[] = [
     status: 'concept',
   },
   {
+    naam: 'Cleanfirm Stylesatlife',
+    branche: 'Schoonmaakbedrijf',
+    beschrijving: 'Professioneel schoonmaakbedrijf voor particulieren en bedrijven in de regio Limburg en Brabant. Gevestigd in Geleen.',
+    pad: '/preview/stylesatlife',
+    kleur: '#1A2B1A',
+    accent: '#2D6A2D',
+    icon: '🧹',
+    status: 'concept',
+  },
+  {
     naam: 'Sjabloon',
     branche: 'Generiek Template',
     beschrijving: 'Het basis-sjabloon voor nieuwe klanten. Kopieer deze map en pas config.ts aan om te starten.',
