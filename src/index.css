@@ -13,13 +13,13 @@
     @apply bg-gray-50;
   }
 
-  /* Scope serif headings away from care4carssittard which uses Teko */
-  :not([data-client="care4carssittard"]) h1,
-  :not([data-client="care4carssittard"]) h2,
-  :not([data-client="care4carssittard"]) h3,
-  :not([data-client="care4carssittard"]) h4,
-  :not([data-client="care4carssittard"]) h5,
-  :not([data-client="care4carssittard"]) h6 {
+  /* Only apply serif headings to clients that haven't opted out */
+  :not([data-client="care4carssittard"]):not([data-client="dutch-ink"]) h1,
+  :not([data-client="care4carssittard"]):not([data-client="dutch-ink"]) h2,
+  :not([data-client="care4carssittard"]):not([data-client="dutch-ink"]) h3,
+  :not([data-client="care4carssittard"]):not([data-client="dutch-ink"]) h4,
+  :not([data-client="care4carssittard"]):not([data-client="dutch-ink"]) h5,
+  :not([data-client="care4carssittard"]):not([data-client="dutch-ink"]) h6 {
     @apply font-serif;
   }
 
@@ -28,6 +28,13 @@
   [data-client="care4carssittard"] h3,
   [data-client="care4carssittard"] h4 {
     font-family: 'Teko', sans-serif;
+  }
+
+  [data-client="dutch-ink"] h1,
+  [data-client="dutch-ink"] h2,
+  [data-client="dutch-ink"] h3,
+  [data-client="dutch-ink"] h4 {
+    font-family: 'Poppins', sans-serif;
   }
 
   p {
