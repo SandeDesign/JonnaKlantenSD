@@ -136,7 +136,7 @@ export const Footer = () => {
               </h4>
               <div
                 className="w-14 h-14 rounded-lg flex items-center justify-center border-2"
-                style={{ borderColor: '#1a1200', color: '#1a1200' }}
+                style={{ borderColor: '#FFFFFF', color: '#FFFFFF' }}
               >
                 <IconGift />
               </div>
