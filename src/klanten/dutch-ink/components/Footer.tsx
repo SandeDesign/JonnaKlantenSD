@@ -96,7 +96,7 @@ export const Footer = () => {
               <strong>12:00 tot 18:00</strong>. We sluiten echter pas{' '}
               <strong>als iedereen gedaan is!</strong>
             </p>
-            <p className="text-sm" style={{ color: '#2a1800' }}>
+            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Onze piercer is alleen aanwezig op vrijdag en zondag van{' '}
               <strong>11:00 tot 17:00</strong>. Wisselen van piercings? Dat kan deze dagen
               tussen <strong>17:00 en 18:00 uur!</strong>
