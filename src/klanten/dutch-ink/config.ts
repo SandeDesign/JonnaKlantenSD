@@ -20,7 +20,11 @@ export const config: DutchInkConfig = {
 
   navigation: [
     { label: 'Over Dutch Ink', path: '/over-ons' },
-    { label: 'Diensten', path: '/diensten' },
+    { label: 'Blog', path: '/de-ultieme-tattoo-gids-2026' },
+    { label: 'Uitgebreide Tattoo-gids', path: '/uitgebreide-tattoo-gids' },
+    { label: 'Tattoos', path: '/alles-over-tatoos' },
+    { label: 'Piercing', path: '/piercing' },
+    { label: 'Permanente make-up', path: '/permanente-make-up' },
     { label: 'Contact', path: '/contact' },
   ],
 

@@ -39,7 +39,7 @@ export const Footer = () => {
   return (
     <footer
       style={{
-        background: 'linear-gradient(160deg, #2D1F00 0%, #4A3500 40%, #3A2800 70%, #2D1F00 100%)',
+        backgroundColor: '#000000',
         borderTop: '1px solid rgba(212,160,23,0.2)',
       }}
     >
@@ -53,14 +53,14 @@ export const Footer = () => {
               alt="Dutch Ink"
               className="h-24 w-auto mb-5"
             />
-            <ul className="space-y-2 text-sm" style={{ color: 'rgba(0,0,0,0.75)' }}>
-              <li className="font-medium" style={{ color: '#1a1200' }}>{hoofd.adres}</li>
+            <ul className="space-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <li className="font-medium" style={{ color: '#FFFFFF' }}>{hoofd.adres}</li>
               {hoofd.telefoon && (
                 <li>
                   <a
                     href={`tel:${hoofd.telefoon}`}
                     className="hover:underline flex items-center gap-1.5"
-                    style={{ color: '#1a1200' }}
+                    style={{ color: '#FFFFFF' }}
                   >
                     📞 {hoofd.telefoon}
                   </a>
@@ -71,14 +71,14 @@ export const Footer = () => {
                   <a
                     href={`https://wa.me/31${hoofd.whatsapp.replace(/^06/, '6').replace(/\D/g, '')}`}
                     className="hover:underline flex items-center gap-1.5"
-                    style={{ color: '#1a1200' }}
+                    style={{ color: '#FFFFFF' }}
                   >
                     💬 {hoofd.whatsapp}
                   </a>
                 </li>
               )}
               <li>
-                <a href={`mailto:${config.email}`} className="hover:underline flex items-center gap-1.5" style={{ color: '#1a1200' }}>
+                <a href={`mailto:${config.email}`} className="hover:underline flex items-center gap-1.5" style={{ color: '#FFFFFF' }}>
                   ✉ {config.email}
                 </a>
               </li>
@@ -87,10 +87,10 @@ export const Footer = () => {
 
           {/* Openingstijden */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-widest mb-4" style={{ color: '#1a1200' }}>
+            <h4 className="text-sm font-extrabold uppercase tracking-widest mb-4" style={{ color: '#FFFFFF' }}>
               Openingstijden
             </h4>
-            <p className="text-sm mb-3" style={{ color: '#1a1200' }}>
+            <p className="text-sm mb-3" style={{ color: '#FFFFFF' }}>
               Dutch Ink is <strong>6 dagen per week geopend</strong>. Van dinsdag tot en met
               zaterdag van <strong>12:00 tot 20:00</strong> en op zondag van{' '}
               <strong>12:00 tot 18:00</strong>. We sluiten echter pas{' '}
@@ -106,7 +106,7 @@ export const Footer = () => {
           {/* Volg ons + Kadobon */}
           <div className="space-y-8">
             <div>
-              <h4 className="text-sm font-extrabold uppercase tracking-widest mb-4" style={{ color: '#1a1200' }}>
+              <h4 className="text-sm font-extrabold uppercase tracking-widest mb-4" style={{ color: '#FFFFFF' }}>
                 Volg ons
               </h4>
               <div className="flex items-center gap-4">
@@ -122,7 +122,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-opacity hover:opacity-70"
-                    style={{ color: '#1a1200' }}
+                    style={{ color: '#FFFFFF' }}
                   >
                     <Icon />
                   </a>
@@ -131,7 +131,7 @@ export const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-sm font-extrabold uppercase tracking-widest mb-4" style={{ color: '#1a1200' }}>
+              <h4 className="text-sm font-extrabold uppercase tracking-widest mb-4" style={{ color: '#FFFFFF' }}>
                 Dutch Ink Kadobon
               </h4>
               <div
@@ -147,13 +147,13 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div
           className="mt-10 pt-5 flex flex-col md:flex-row justify-center items-center gap-3 text-xs"
-          style={{ borderTop: '1px solid rgba(0,0,0,0.15)', color: 'rgba(0,0,0,0.5)' }}
+          style={{ borderTop: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)' }}
         >
           <span>© Copyright – {config.naam}</span>
           <span className="hidden md:inline">|</span>
-          <a href="/" className="hover:underline" style={{ color: 'rgba(0,0,0,0.6)' }}>Home</a>
+          <a href="/" className="hover:underline" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a>
           <span>|</span>
-          <a href="/" className="hover:underline" style={{ color: 'rgba(0,0,0,0.6)' }}>Gebruiksvoorwaarden</a>
+          <a href="/" className="hover:underline" style={{ color: 'rgba(255,255,255,0.6)' }}>Gebruiksvoorwaarden</a>
           <span className="hidden md:inline">|</span>
           <span>
             Website door{' '}
