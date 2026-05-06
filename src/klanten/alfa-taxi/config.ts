@@ -35,7 +35,7 @@ export const config: AlfaTaxiConfig = {
   hero: {
     title: 'Altijd op tijd, altijd comfortabel',
     subtitle: 'Betrouwbaar taxivervoer voor particulieren en zakelijk. Direct boeken, vaste tarieven, 24/7 beschikbaar.',
-    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1920&h=1080&fit=crop',
+    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1920&h=1080&fit=crop',
     cta: 'Direct Boeken',
     ctaLink: '/boeken',
     ctaSecondary: 'Bekijk Tarieven',
